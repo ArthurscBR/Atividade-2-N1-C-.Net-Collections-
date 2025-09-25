@@ -29,11 +29,35 @@ class Program
         lista.AddRange(adicionaveis);
     }
 
+    public static void vizualizar(List<string> lista)
+    {
+        Console.WriteLine("selecione uma das opções:\n1. Vizualizar todos os elementos da lista.\n2. Vizualizar um elemento em especifico.");
+        var op = int.Parse(Console.ReadLine());
+        switch(op)
+        {
+            case 1:
+                lista.ForEach(item=>{Console.WriteLine(item);});
+                break;
+            case 2:
+                Console.WriteLine("Digite o elemento que deseja procurar: ");
+                var elemento = Console.ReadLine();
+
+                break;
+
+            default: 
+                Console.WriteLine("Opção inválida!");
+                break;
+        }
+    } 
+
+
+
     static void Main()
     {
         List<string> nomes = new List<string>() {"Arthur","Heitor"};
         //adiciona(nomes);
-        adiciona_varios(nomes);
-        nomes.ForEach(item=>{Console.WriteLine(item);});
+        vizualizar(nomes);
+
+        
     }
 }
