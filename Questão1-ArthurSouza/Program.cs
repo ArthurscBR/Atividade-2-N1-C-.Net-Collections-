@@ -64,16 +64,28 @@ class Program
 
     public static void remove(List<string> lista)
     {
-        Console.WriteLine("Digite o elememto que deseja remover: ");
+        Console.WriteLine("selecione uma das opções:\n1. Remover todos os elementos da lista.\n2. Remover um elemento em especifico.");
+        int op = int.Parse(Console.ReadLine());
+        switch(op){
+            case 1:
+                lista.Clear();
+                break;
+            case 2:
+                Console.WriteLine("Digite o elememto que deseja remover: ");
 
-        var elememto = Console.ReadLine();
-        
-        for(int i = 0; i<lista.Count; i++){
-            
-            if(lista[i].ToLower().Equals(elememto.ToLower()))
-            {
-                lista.Remove(lista[i]);
-            }
+                var elememto = Console.ReadLine();
+                
+                for(int i = 0; i<lista.Count; i++){
+                    
+                    if(lista[i].ToLower().Equals(elememto.ToLower()))
+                    {
+                        lista.Remove(lista[i]);
+                    }
+                }
+
+                break;
+        default:
+                break;
         }
     }
 
