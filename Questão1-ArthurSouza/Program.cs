@@ -61,11 +61,28 @@ class Program
                 break;
         }
     } 
-    
+
+    public static void remove(List<string> lista)
+    {
+        Console.WriteLine("Digite o elememto que deseja remover: ");
+
+        var elememto = Console.ReadLine();
+        
+        for(int i = 0; i<lista.Count; i++){
+            
+            if(lista[i].ToLower().Equals(elememto.ToLower()))
+            {
+                lista.Remove(lista[i]);
+            }
+        }
+    }
+
     static void Main()
     {
         List<string> nomes = new List<string>() {"Arthur","Heitor"};
         //adiciona(nomes);
+        //vizualizar(nomes);
+        remove(nomes);
         vizualizar(nomes);
 
         
