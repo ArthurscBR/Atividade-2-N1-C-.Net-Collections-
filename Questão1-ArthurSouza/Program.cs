@@ -89,14 +89,20 @@ class Program
         }
     }
 
+    public static int indice(List<string> lista, string item)
+    {
+        return lista.IndexOf(item);
+    } 
+
+
     static void Main()
     {
         List<string> nomes = new List<string>() {"Arthur","Heitor"};
         //adiciona(nomes);
         //vizualizar(nomes);
-        remove(nomes);
-        vizualizar(nomes);
+        //remove(nomes);
+        //vizualizar(nomes);
 
-        
+        Console.WriteLine($"Indice que armazena 'Arthur': {indice(nomes, "Arthur")}");
     }
 }
