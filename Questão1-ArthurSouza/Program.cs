@@ -94,15 +94,33 @@ class Program
         return lista.IndexOf(item);
     } 
 
+    public static void adiciona_dic(Dictionary<string, int> dict)
+    {
+        Console.WriteLine("Digite seu nome: ");
+        var nome = Console.ReadLine();
+        Console.WriteLine("Digite sua idade: ");
+        var idade = int.Parse(Console.ReadLine());
+        
+        dict.Add(nome, idade);
+    }
+
 
     static void Main()
     {
         List<string> nomes = new List<string>() {"Arthur","Heitor"};
+        Dictionary<string, int> ages = new Dictionary<string, int>() 
+        {
+            {"Maria", 30}
+        };
+        //Listas
         //adiciona(nomes);
         //vizualizar(nomes);
         //remove(nomes);
         //vizualizar(nomes);
+        //Console.WriteLine($"Indice que armazena 'Arthur': {indice(nomes, "Arthur")}");
+        //Dicionarios
 
-        Console.WriteLine($"Indice que armazena 'Arthur': {indice(nomes, "Arthur")}");
+        adiciona_dic(ages);
+        
     }
 }
