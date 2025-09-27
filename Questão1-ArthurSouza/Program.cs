@@ -41,7 +41,19 @@ class Program
             case 2:
                 Console.WriteLine("Digite o elemento que deseja procurar: ");
                 var elemento = Console.ReadLine();
-
+                bool flag = false;
+                lista.ForEach(item => 
+                {   
+                   if (item.ToLower().Contains(elemento.ToLower()))
+                   {
+                    Console.WriteLine(item);
+                    flag = true;
+                   }
+                });
+                if(!flag)
+                {
+                    Console.WriteLine("Nenhum elemento correspondente encontrado");
+                }
                 break;
 
             default: 
@@ -49,9 +61,7 @@ class Program
                 break;
         }
     } 
-
-
-
+    
     static void Main()
     {
         List<string> nomes = new List<string>() {"Arthur","Heitor"};
