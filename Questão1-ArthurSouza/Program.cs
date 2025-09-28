@@ -188,6 +188,21 @@ class Program
             Console.WriteLine($"{item.Value} : {item.IsEven}");
         }
 
-        
+        //Ordenação
+        var ascending = numbers.OrderBy(n => n);
+        var descending = numbers.OrderByDescending(n => n);
+        Console.WriteLine("Ondenando numero da lista de forma decrescente: ");
+        foreach(var item in descending)
+        {
+            Console.WriteLine(item);
+        }
+
+        var complex = numbers.OrderBy(n => n % 3).ThenByDescending(n => n);
+        Console.WriteLine("Ordenando numeros com base no modulo da divisão por 3: ");
+        foreach (var item in complex)
+        {
+            Console.WriteLine(item);
+        }
+
     }
 }
