@@ -216,5 +216,16 @@ class Program
         int product = numbers.Aggregate((a, b) => a * b);
         Console.WriteLine($"Media dos numeros presentes na lista: {product}");
 
+        // Quantificadores 
+        bool allEven = numbers.All(n => n % 2 == 0);
+        Console.WriteLine($"Retornando se todos os numeros da lista são pares (true or false) {allEven}");
+        bool anyEven = numbers.Any(n => n % 2 == 0);
+        Console.WriteLine($"Retornando se pelo menos um dos numeros da lista é par (true or false) {anyEven}");
+        bool contains = numbers.Contains(7);
+        Console.WriteLine($"Retornando se a lista possui o numero 7 (true or false) {contains}");
+        
+
+        
+
     }
 }
