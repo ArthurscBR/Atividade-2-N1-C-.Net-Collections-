@@ -157,13 +157,37 @@ class Program
 
     static void Main()
     {
+        //Filtragem 
         List<int> numbers = new List<int>() {1,2,3,4,5,6,7,8,9,10};
-
+        Console.WriteLine("Numeros pares: ");
         var even = numbers.Where(n=>n%2==0);
-
         foreach(var item in even)
         {
-            Console.WriteLine(item);
+            Console.Write($"{item}, ");
         }
+        Console.WriteLine("\nNumeros maiores que 5: ");
+        var greaterThanFive = numbers.Where(n => n > 5);
+        foreach(var item in greaterThanFive)
+        {
+            Console.Write($"{item}, ");
+        }
+
+        //Tranformação  
+        var doubled = numbers.Select(n => n * 2);
+
+        Console.WriteLine("\nNumeros multiplicados por 2: ");
+        foreach(var item in doubled)
+        {
+            Console.Write($"{item}, ");
+        }
+
+        var numberObjects = numbers.Select(n => new {Value = n, IsEven = n % 2 == 0 });        
+        Console.WriteLine("\nNumeros pares ou não: ");
+        foreach (var item in numberObjects)
+        {
+            Console.WriteLine($"{item.Value} : {item.IsEven}");
+        }
+
+        
     }
 }
