@@ -132,8 +132,8 @@ class Program
         int aliceAge = ages["Alice"];
         Console.WriteLine($"Alice tem {aliceAge} anos"); 
 
-        
-
+        bool sucess = ages.TryGetValue("Jose", out int idadeJose);
+        Console.WriteLine($"Idede de Jose: {idadeJose}");
 
 
     }
