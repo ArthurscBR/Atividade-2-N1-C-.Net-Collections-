@@ -138,6 +138,8 @@ class Program
         bool containsKey = ages.ContainsKey("Maria");
         Console.WriteLine($"O dicionario ages contem a chave 'Maria'? {containsKey}");
 
+        bool removed = ages.Remove("Joao");
+        Console.WriteLine($"Joao foi removido do dicionario? {removed}");
 
     }
 }
