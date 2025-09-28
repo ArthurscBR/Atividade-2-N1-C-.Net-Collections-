@@ -223,9 +223,33 @@ class Program
         Console.WriteLine($"Retornando se pelo menos um dos numeros da lista é par (true or false) {anyEven}");
         bool contains = numbers.Contains(7);
         Console.WriteLine($"Retornando se a lista possui o numero 7 (true or false) {contains}");
+
+        // Partição 
+        var firtThree = numbers.Take(3);
+        foreach(var item in firtThree)
+        {
+            Console.WriteLine(item);
+        } 
+
+        var skipFirstThree = numbers.Skip(3);
+        foreach(var item in skipFirstThree)
+        {
+            Console.WriteLine(item);
+        } 
+
+        var takeLast = numbers.TakeLast(2);
         
+        foreach(var item in takeLast)
+        {
+            Console.WriteLine(item);
+        } 
+
+        var skipLast  = numbers.SkipLast(2);
+        foreach(var item in skipLast)
+        {
+            Console.WriteLine(item);
+        } 
 
         
-
     }
 }
