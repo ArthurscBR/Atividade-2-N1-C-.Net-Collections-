@@ -204,5 +204,17 @@ class Program
             Console.WriteLine(item);
         }
 
+        //Agregação
+        int sum = numbers.Sum();
+        Console.WriteLine($"somas do numeros da lista: {sum}");
+        int min = numbers.Min();
+        Console.WriteLine($"Menor numero presente na lista: {min}");
+        int max = numbers.Max();
+        Console.WriteLine($"Maior numero presente na lista: {max}");
+        double average = numbers.Average();
+        Console.WriteLine($"Media dos numeros presentes na lista: {average}");
+        int product = numbers.Aggregate((a, b) => a * b);
+        Console.WriteLine($"Media dos numeros presentes na lista: {product}");
+
     }
 }
