@@ -250,6 +250,21 @@ class Program
             Console.WriteLine(item);
         } 
 
+        // Operações de elemento 
+
+        var first = numbers.First();
+        Console.WriteLine($"primeiro numero da lista: {first}");
+
+        var firstEven = numbers.First(n => n % 2 == 0);
+        Console.WriteLine($"primeiro numero da lista a cumprir a condição: {firstEven}");
+
+        var lastOdd = numbers.Last(n => n % 2 != 0);
+        Console.WriteLine($"ultimo numero da lista a cumprir a condição: {lastOdd}");
+
+        int single = numbers.Where(n => n == 5).Single();
+        Console.WriteLine($"um numero da lista que cumpra a condição: {single}");
+
         
+
     }
 }
