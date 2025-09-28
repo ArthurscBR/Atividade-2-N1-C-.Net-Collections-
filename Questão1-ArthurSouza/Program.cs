@@ -264,7 +264,22 @@ class Program
         int single = numbers.Where(n => n == 5).Single();
         Console.WriteLine($"um numero da lista que cumpra a condição: {single}");
 
-        
+        // Grouping
+        var groups = numbers.GroupBy(n => n % 3);
+        foreach(var item in groups)
+        {
+            Console.WriteLine($"Remainder {item.Key}: {string.Join(", ", item)}");
+        }
+
+        // Sintaxe de consulta
+
+        var queryResult = from n in numbers where n > 5 orderby n descending select n * 2;
+
+        foreach(var item in queryResult)
+        {
+            Console.WriteLine(item);
+        }
+                        
 
     }
 }
