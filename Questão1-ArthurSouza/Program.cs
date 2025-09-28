@@ -1,4 +1,5 @@
-﻿
+﻿using System.Linq;
+
 class Program
 {
     public static void adiciona(List<string> lista)
@@ -118,7 +119,7 @@ class Program
         
     }
     
-    static void Main()
+    public static void dicionario()
     {
          Dictionary<string, int> ages = new Dictionary<string, int>() 
         {
@@ -152,5 +153,17 @@ class Program
             Console.WriteLine($"{nome} : {age}");
         }
 
+    }
+
+    static void Main()
+    {
+        List<int> numbers = new List<int>() {1,2,3,4,5,6,7,8,9,10};
+
+        var even = numbers.Where(n=>n%2==0);
+
+        foreach(var item in even)
+        {
+            Console.WriteLine(item);
+        }
     }
 }
