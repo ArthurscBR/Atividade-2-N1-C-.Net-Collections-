@@ -141,5 +141,16 @@ class Program
         bool removed = ages.Remove("Joao");
         Console.WriteLine($"Joao foi removido do dicionario? {removed}");
 
+        Console.WriteLine("Exibindo chave e valor: ");
+        foreach(KeyValuePair<string, int> pair in ages)
+        {
+            Console.WriteLine($"{pair.Key} : {pair.Value}");
+        }
+
+        foreach(var (nome, age) in ages)
+        {
+            Console.WriteLine($"{nome} : {age}");
+        }
+
     }
 }
