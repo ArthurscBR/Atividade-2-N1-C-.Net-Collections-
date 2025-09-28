@@ -135,6 +135,9 @@ class Program
         bool sucess = ages.TryGetValue("Jose", out int idadeJose);
         Console.WriteLine($"Idede de Jose: {idadeJose}");
 
+        bool containsKey = ages.ContainsKey("Maria");
+        Console.WriteLine($"O dicionario ages contem a chave 'Maria'? {containsKey}");
+
 
     }
 }
