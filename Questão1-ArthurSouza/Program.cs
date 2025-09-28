@@ -105,22 +105,36 @@ class Program
     }
 
 
-    static void Main()
+    public static void lista()
     {
         List<string> nomes = new List<string>() {"Arthur","Heitor"};
-        Dictionary<string, int> ages = new Dictionary<string, int>() 
+       
+        
+        adiciona(nomes);
+        vizualizar(nomes);
+        remove(nomes);
+        vizualizar(nomes);
+        Console.WriteLine($"Indice que armazena 'Arthur': {indice(nomes, "Arthur")}");
+        
+    }
+    
+    static void Main()
+    {
+         Dictionary<string, int> ages = new Dictionary<string, int>() 
         {
             {"Maria", 30}
         };
-        //Listas
-        //adiciona(nomes);
-        //vizualizar(nomes);
-        //remove(nomes);
-        //vizualizar(nomes);
-        //Console.WriteLine($"Indice que armazena 'Arthur': {indice(nomes, "Arthur")}");
-        //Dicionarios
+        //adiciona_dic(ages);
+        ages["Maria"] = 40;
+        ages.Add("Jose", 25);
+        ages.Add("Alice", 30);
 
-        adiciona_dic(ages);
+        int aliceAge = ages["Alice"];
+        Console.WriteLine($"Alice tem {aliceAge} anos"); 
+
         
+
+
+
     }
 }
